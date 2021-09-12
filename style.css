@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background-color: #c3c7ca;
+  --border-color: #e3e5e4;
+  --font-color: #34444f;
+  --right-color: #09da52;
+  --wrong-color: #ff3838;
+}
+
+body {
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  font-family: "Roboto Slab", sans-serif;
+  background-color: #fff;
+}
+
+.dragable-list {
+  list-style: none;
+  border: 1px solid var(--border-color);
+  padding: 0;
+  color: var(--font-color);
+  margin: 1em;
+}
+
+.dragable-list li {
+  background-color: #fff;
+  display: flex;
+  flex: 1;
+}
+
+.dragable-list li:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dragable-list .number {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  /* height: 60px; */
+  width: 60px;
+}
+
+.dragable-list li.over .dragable {
+  background-color: #eaeaea;
+}
+
+.dragable-list .person-name {
+  margin: 0 20px 0 0;
+}
+
+.dragable-list li.right .person-name {
+  color: var(--right-color);
+}
+.dragable-list li.wrong .person-name {
+  color: var(--wrong-color);
+}
+
+.dragable {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: 15px;
+}
+
+.btn {
+  padding: 1em 2em;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--background-color);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 0;
+  }
+}
