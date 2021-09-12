@@ -14,10 +14,9 @@ richPersionList();
 const IMAGE_PLACEHOLDER = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Ftoppng.com%2Fdonna-picarro-dummy-avatar-PNG-free-PNG-Images_239768&psig=AOvVaw3qQflaG13YfYkorcSVK82R&ust=1631523589493000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJj49pWJ-fICFQAAAAAdAAAAABAD';
 
 function intialize() {
+
     [...arr].sort((a, b) => a.sort - b.sort).forEach((person, index) => {
-
         const listItem = document.createElement('li');
-
         listItem.setAttribute('data-index', index);
 
         listItem.innerHTML = `
